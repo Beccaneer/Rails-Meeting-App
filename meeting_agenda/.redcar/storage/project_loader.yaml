@@ -1,0 +1,8 @@
+--- 
+open_files: 
+  - db/seeds.rb
+  - db/schema.rb
+  - app/views/meetings/_form.html.erb
+  - app/views/meetings/new.html.erb
+  - app/views/meetings/show.html.erb
+  - app/controllers/meetings_controller.rb

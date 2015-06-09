@@ -1,0 +1,56 @@
+<%= form_for(@meeting) do |f| %>
+  <% if @meeting.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@meeting.errors.count, "error") %> prohibited this meeting from being saved:</h2>
+
+      <ul>
+      <% @meeting.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date %><br />
+    <%= f.text_field :date %>
+  </div>
+  <div class="field">
+    <%= f.label :place %><br />
+    <%= f.text_field :place %>
+  </div>
+  <div class="field">
+    <%= f.label :time %><br />
+    <%= f.text_field :time %>
+  </div>
+  <div class="field">
+    <%= f.label :endtime %><br />
+    <%= f.text_field :endtime %><br />
+  </div>
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %><br />
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label "Do you require e-mail reminders?" %>
+    <%= f.check_box :reminders %>
+  </div>
+  <div class="field">
+    <%= f.label "List any general discussion items here" %></br>
+    <%= f.text_area :item %>
+  </div>
+  <%= check_box_tag 'all?[]', "Select all"%>
+  <ul>
+  <% @all.each do |user| %>
+    <%= check_box_tag 'user_ids[]', user.id -%>
+    <%= h user.fname -%>
+  <% end %>
+</ul>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

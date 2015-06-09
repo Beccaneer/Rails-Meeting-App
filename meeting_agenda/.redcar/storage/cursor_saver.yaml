@@ -1,0 +1,90 @@
+--- 
+cursor_positions: 
+  - :path: app/models/attendee.rb
+    :cursor_offset: 94
+    :timestamp: 2012-12-06 10:35:05 -05:00
+  - :path: config/environment.rb
+    :cursor_offset: 326
+    :timestamp: 2012-12-03 10:46:59 -05:00
+  - :path: app/views/discussions/new.html.erb
+    :cursor_offset: 0
+    :timestamp: 2012-11-15 14:08:00 -05:00
+  - :path: config/application.rb
+    :cursor_offset: 1408
+    :timestamp: 2012-12-07 11:28:42 -05:00
+  - :path: app/models/discussion.rb
+    :cursor_offset: 85
+    :timestamp: 2012-12-07 10:44:43 -05:00
+  - :path: app/views/discussions/index.html.erb
+    :cursor_offset: 160
+    :timestamp: 2012-11-15 14:08:00 -05:00
+  - :path: app/views/discussions/_form.html.erb
+    :cursor_offset: 313
+    :timestamp: 2012-11-15 14:08:00 -05:00
+  - :path: app/controllers/application_controller.rb
+    :cursor_offset: 310
+    :timestamp: 2012-12-03 14:52:37 -05:00
+  - :path: app/views/users/new.html.erb
+    :cursor_offset: 71
+    :timestamp: 2012-12-10 09:15:43 -05:00
+  - :path: app/controllers/home_controller.rb
+    :cursor_offset: 350
+    :timestamp: 2012-12-07 14:27:59 -05:00
+  - :path: app/controllers/attendees_controller.rb
+    :cursor_offset: 193
+    :timestamp: 2012-12-10 12:57:01 -05:00
+  - :path: app/views/agenda_reminder/reminder_email.html.erb
+    :cursor_offset: 237
+    :timestamp: 2012-12-10 10:41:38 -05:00
+  - :path: app/mailers/agenda_reminder.rb
+    :cursor_offset: 262
+    :timestamp: 2012-12-10 10:39:54 -05:00
+  - :path: app/views/home/index.html.erb
+    :cursor_offset: 1303
+    :timestamp: 2012-12-12 09:32:31 -05:00
+  - :path: app/controllers/users_controller.rb
+    :cursor_offset: 1345
+    :timestamp: 2012-12-10 09:31:19 -05:00
+  - :path: app/views/users/show.html.erb
+    :cursor_offset: 303
+    :timestamp: 2012-11-15 14:06:45 -05:00
+  - :path: app/models/user.rb
+    :cursor_offset: 277
+    :timestamp: 2012-12-13 10:45:19 -05:00
+  - :path: app/views/users/_form.html.erb
+    :cursor_offset: 767
+    :timestamp: 2012-12-12 14:42:30 -05:00
+  - :path: app/views/users/edit.html.erb
+    :cursor_offset: 75
+    :timestamp: 2012-11-15 14:06:45 -05:00
+  - :path: app/models/meeting.rb
+    :cursor_offset: 72
+    :timestamp: 2012-12-13 10:46:45 -05:00
+  - :path: app/views/users/index.html.erb
+    :cursor_offset: 308
+    :timestamp: 2012-12-12 14:41:56 -05:00
+  - :path: app/views/meetings/index.html.erb
+    :cursor_offset: 435
+    :timestamp: 2012-12-13 10:53:41 -05:00
+  - :path: app/views/meetings/edit.html.erb
+    :cursor_offset: 916
+    :timestamp: 2012-12-14 12:04:43 -05:00
+  - :path: db/seeds.rb
+    :cursor_offset: 478
+    :timestamp: 2012-12-10 14:26:39 -05:00
+  - :path: db/schema.rb
+    :cursor_offset: 1613
+    :timestamp: 2012-12-13 10:46:27 -05:00
+  - :path: app/views/meetings/_form.html.erb
+    :cursor_offset: 1307
+    :timestamp: 2012-12-14 12:16:06 -05:00
+  - :path: app/views/meetings/new.html.erb
+    :cursor_offset: 68
+    :timestamp: 2012-12-13 10:58:00 -05:00
+  - :path: app/views/meetings/show.html.erb
+    :cursor_offset: 854
+    :timestamp: 2012-12-14 12:15:05 -05:00
+  - :path: app/controllers/meetings_controller.rb
+    :cursor_offset: 2531
+    :timestamp: 2012-12-14 12:18:06 -05:00
+files_to_retain: 0

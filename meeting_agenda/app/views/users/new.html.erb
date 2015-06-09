@@ -1,0 +1,11 @@
+<% if @active.admin == true %>
+
+<h1>New user</h1>
+
+<%= render 'form' %>
+
+<% else %>
+Sorry, you are not able to add any new users..
+<% end %>
+
+<%= link_to 'Back', users_path %>

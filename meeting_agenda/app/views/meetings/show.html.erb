@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Creator:</b>
+  <%= @user.fname %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @meeting.date.strftime("%B, %d") %>
+</p>
+
+<p>
+  <b>Place:</b>
+  <%= @meeting.place %>
+</p>
+
+<p>
+  <b>Time:</b>
+  <%= @meeting.time.strftime("%l:%M %p") %>
+</p>
+
+<p>
+  <b>End time:</b>
+  <%= @meeting.endtime.strftime("%l:%M %p") %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @meeting.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @meeting.description %>
+</p>
+
+<p>
+  <b>Attendees:</b>
+<ul>
+  <% @allusers.each do |user|%>
+  <li>
+    <%= h user.fname -%>
+  </br>
+  <p>
+    <% @item = Discussion.first(:conditions => {:meeting_id => @meeting.id, :user_id => user.id}) %>
+    <%= h @item.item %>
+  </p>
+  </li>
+
+  <% end %>
+<p> <b>Discussion Items:</b>
+  <%= @meeting.item%>
+</p>
+</ul>
+<!-- <% if @user.id == @meeting.user_id %> -->
+<!-- <%= link_to 'Edit', edit_meeting_path(@meeting) %> | -->
+<!-- <% end %> -->
+<%= link_to 'Back', root_path %>

@@ -1,0 +1,56 @@
+<h1> login successful </h1>
+
+
+<p>Hey Hey Welcome to the Meeting App <%= @user.fname %></p>
+
+<% if @user.admin == true %>
+<div class="admin-menu">
+  <h2> Admin Menu </h2>
+    <%= link_to "Add a user", new_user_path %> 
+    <%= link_to "View all users", users_path%>
+<% end %>  
+  
+<p><%= link_to "Make a meeting", new_meeting_path %></p>
+
+
+<% if @usermeetings.size >= 1 %>
+<h2> Your upcoming meetings: </h2>
+  <ul>
+    <% @usermeetings.each do |meeting|%>
+    <% if meeting.date.future? == true %>
+      <li>
+        <%= link_to meeting.title, meeting_path(meeting.id) %>
+        <%= meeting.date.strftime(" held on %B %d") %>
+        <% @discussion = Discussion.first(:conditions => {:meeting_id => meeting.id, :user_id => @user.id})%>
+        <%= link_to "Edit your agenda item", edit_discussion_path(@discussion.id) %>
+      </br>
+        <%= @discussion.item %>
+      </li>
+    <% end %>
+    <% end %>
+  </ul>
+
+    <h2> Your past meetings: </h2>
+    <ul>
+    <% @usermeetings.each do |meeting|%>
+    <% if meeting.date.past? == true %>
+      <li>
+        <%= link_to meeting.title, meeting_path(meeting.id) %>
+        <%= meeting.date.strftime(" held on %B %d") %>
+        <% @discussion = Discussion.first(:conditions => {:meeting_id => meeting.id, :user_id => @user.id})%>
+        <%= link_to "Edit your agenda item", edit_discussion_path(@discussion.id) %>
+      </br>
+        <%= @discussion.item %>
+      </li>
+
+    <% end %>
+    <% end %>
+  </ul>
+
+  
+<% else %>
+  You have no meetings!
+<% end %>
+
+
+
